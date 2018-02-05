@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x1901">
+        <ImageView android:id="@id/spider_iv_hotel" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/spider_icon_hotel" />
+        <View android:layout_width="UNKNOWN_DATA_0x1" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:id="@id/spider_iv_flight" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/spider_icon_flight" />
+        <View android:layout_width="UNKNOWN_DATA_0x1" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:id="@id/spider_iv_vocation" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/spider_icon_vocation" />
+        <View android:layout_width="UNKNOWN_DATA_0x1" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:id="@id/spider_iv_financial" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/spider_icon_financial" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/spider_fl_progress" android:visibility="invisible" android:layout_width="UNKNOWN_DATA_0xa01" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/spider_ll_progress" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x201" android:layout_marginTop="6dp">
+            <View android:background="@drawable/spider_shape_hotel" android:layout_width="UNKNOWN_DATA_0x1" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <View android:background="@drawable/spider_shape_flight" android:layout_width="UNKNOWN_DATA_0x1" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <View android:background="@drawable/spider_shape_vocation" android:layout_width="UNKNOWN_DATA_0x1" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:id="@id/spider_view_cover" android:background="0x106000b" android:visibility="gone" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x201" android:layout_marginTop="6dp" />
+    </FrameLayout>
+</merge>

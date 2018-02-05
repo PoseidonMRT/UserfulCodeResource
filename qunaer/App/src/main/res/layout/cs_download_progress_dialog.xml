@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginRight="26dp" android:layout_marginBottom="8dp" android:layout_marginEnd="26dp">
+        <TextView android:textSize="13sp" android:textColor="@color/ql_black_100_percent" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:text="@string/CS_downloading_now_new" android:layout_alignParentLeft="true" android:layout_marginEnd="8dp" android:layout_alignParentStart="true" />
+        <TextView android:textSize="13sp" android:textColor="@color/ql_black_50_percent" android:id="@+id/information" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+        <ProgressBar android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/progressbar" android:layout_width="UNKNOWN_DATA_0x1" android:layout_height="UNKNOWN_DATA_0x401" android:layout_marginRight="8dp" android:layout_weight="1.0" android:layout_marginEnd="8dp" style="?unknown_attr_ref: 1010078" />
+        <ImageView android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/cancel_download" android:focusable="true" android:visibility="visible" android:layout_width="UNKNOWN_DATA_0x1201" android:layout_height="UNKNOWN_DATA_0x1201" android:src="@drawable/cs_ota_cancel_download" android:contentDescription="@string/CS_terminate" />
+    </LinearLayout>
+</LinearLayout>

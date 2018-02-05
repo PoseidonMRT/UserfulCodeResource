@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:scrollbars="UNKNOWN_DATA_0x0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16dp" android:textColor="0x106000b" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="　　欢迎使用去哪儿旅行，为了向您提供更好的服务，在使用过程中，会需要以下权限：
+●　请求应用数据需要您的设备进行联网
+●　预定酒店等功能需要定位和拨打电话
+●　存储软件数据需要外存权限
+●　即时消息功能会读取通讯录以及录音
+●　扫一扫等功能会调用相机
+●　订单功能会使用到日历提醒
+　　在进行上述操作行为时，我们郑重承诺： 保护用户隐私是去哪儿的一项基本政策，未经授权我们不会收集、处理或泄露您的个人信息。
+　　选择“确定”即表示您已清楚了解并同意使用去哪儿旅行。" android:lineSpacingExtra="3dp" />
+        <CheckBox android:textSize="16dp" android:textColor="0x106000b" android:id="@id/spider_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:checked="true" android:text="以后不再提示" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <raw name="eye_blink">res/raw/eye_blink.mp3</raw>
+    <raw name="failed">res/raw/failed.mp3</raw>
+    <raw name="idscan_beep">res/raw/idscan_beep.ogg</raw>
+    <raw name="idscan_country_code">res/raw/idscan_country_code.txt</raw>
+    <raw name="idscan_nation">res/raw/idscan_nation.json</raw>
+    <raw name="idscan_passport">res/raw/idscan_passport.weights</raw>
+    <raw name="idscan_pinyin">res/raw/idscan_pinyin.txt</raw>
+    <raw name="idscan_surname">res/raw/idscan_surname.txt</raw>
+    <raw name="model">res/raw/model</raw>
+    <raw name="mouth_open">res/raw/mouth_open.mp3</raw>
+    <raw name="pitch_down">res/raw/pitch_down.mp3</raw>
+    <raw name="success">res/raw/success.mp3</raw>
+    <raw name="well_done">res/raw/well_done.mp3</raw>
+    <raw name="yaw">res/raw/yaw.mp3</raw>
+</resources>

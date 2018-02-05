@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:orientation="horizontal" android:background="0x106000c" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="UNKNOWN_DATA_0x2a01" android:layout_height="UNKNOWN_DATA_0x2a01" android:layout_marginLeft="12dp" android:layout_marginRight="12dp" android:src="@drawable/spider_ic_launcher" />
+    <LinearLayout android:orientation="vertical" android:layout_width="UNKNOWN_DATA_0x1" android:layout_height="wrap_content" android:layout_weight="1.0"
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5dp">
+            <TextView android:textColor="0x106000b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/spider_app_name" style="@*style/TextAppearance.StatusBar.EventContent.Title" />
+            <TextView android:textColor="0x106000b" android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/spider_noti_progress_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" style="@*style/TextAppearance.StatusBar.EventContent" />
+        </LinearLayout>
+        <ProgressBar android:id="@+id/spider_noti_progress_bar" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x401" style="@*style/Widget.ProgressBar.Horizontal" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/spider_noti_action" android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="12dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/spider_noti_pause" android:layout_width="UNKNOWN_DATA_0x1e01" android:layout_height="UNKNOWN_DATA_0x1e01" android:src="@drawable/spider_noti_pause" />
+        <ImageView android:id="@+id/spider_noti_proceed" android:layout_width="UNKNOWN_DATA_0x1e01" android:layout_height="UNKNOWN_DATA_0x1e01" android:src="@drawable/spider_noti_proceed" />
+    </LinearLayout>
+</LinearLayout>

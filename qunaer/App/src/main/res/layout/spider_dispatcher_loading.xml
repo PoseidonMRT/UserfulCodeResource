@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/root" android:background="0x106000d" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:orientation="vertical" android:background="@drawable/spider_dispatcher_loading_background" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="0x106000b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在加载" style="@style/spider_StyleTextView" />
+        <ProgressBar android:id="@+id/progressBar" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0xa01" android:layout_marginTop="5dp" android:indeterminate="true" style="?unknown_attr_ref: 1010078" />
+    </LinearLayout>
+</FrameLayout>

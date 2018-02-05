@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <xml name="nfc_tech_filter">res/xml/nfc_tech_filter.xml</xml>
+    <xml name="ota_provider_paths">res/xml/ota_provider_paths.xml</xml>
+    <xml name="shortcuts">res/xml/shortcuts.xml</xml>
+    <xml name="spider_filepath">res/xml/spider_filepath.xml</xml>
+    <xml name="spider_launcher_menu">res/xml/spider_launcher_menu.xml</xml>
+</resources>

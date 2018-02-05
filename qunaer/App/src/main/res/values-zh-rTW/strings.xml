@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="spider_3dtouch_flight">預訂機票</string>
+    <string name="spider_3dtouch_hotel">預訂酒店</string>
+    <string name="spider_3dtouch_order">我的訂單</string>
+    <string name="spider_3dtouch_search">搜索</string>
+    <string name="spider_app_name">去哪兒旅行</string>
+</resources>

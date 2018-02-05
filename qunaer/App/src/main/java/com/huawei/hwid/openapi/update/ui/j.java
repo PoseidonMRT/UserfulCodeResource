@@ -1,0 +1,16 @@
+package com.huawei.hwid.openapi.update.ui;
+
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+
+class j implements OnClickListener {
+    final /* synthetic */ OtaDownloadActivity a;
+
+    j(OtaDownloadActivity otaDownloadActivity) {
+        this.a = otaDownloadActivity;
+    }
+
+    public void onClick(DialogInterface dialogInterface, int i) {
+        this.a.h();
+    }
+}

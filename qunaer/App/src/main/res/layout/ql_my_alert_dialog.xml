@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/ql_transparent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+    <RelativeLayout android:background="@drawable/xh_dialog_backgroud" android:layout_width="UNKNOWN_DATA_0x13e01" android:layout_height="wrap_content" android:layout_centerInParent="true"
+        <RelativeLayout android:id="@+id/my_dialog_top" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3c01" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+            <TextView android:textSize="14sp" android:textColor="@color/ql_quick_login_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ql_dialog_title" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/my_dialog_body" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x8201" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_below="@+id/my_dialog_top"
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3201">
+                <TextView android:textSize="13sp" android:textColor="@color/ql_quick_login_error" android:id="@+id/my_dialog_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="11" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/my_dialog_layout_1" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3801" android:layout_marginTop="12dp" android:weightSum="2.0" android:layout_alignParentBottom="true">
+                <Button android:textSize="13sp" android:textColor="@color/ql_quick_login_foot_button" android:id="@+id/my_dialog_cancel" android:background="@drawable/xh_footer_selector" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="3dp" android:text="@string/ql_cacel" android:layout_weight="1.0" />
+                <Button android:textSize="13sp" android:textColor="@color/ql_quick_login_foot_button" android:id="@+id/my_dialog_retry" android:background="@drawable/xh_footer_selector" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="3dp" android:text="@string/ql_retry" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/my_dialog_layout_2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3801" android:layout_marginTop="12dp" android:layout_alignParentBottom="true">
+                <Button android:textSize="13sp" android:textColor="@color/ql_quick_login_foot_button" android:id="@+id/my_dialog_ok" android:background="@drawable/xh_footer_selector" android:layout_width="match_parent" android:layout_height="match_parent" android:text="0x104000a" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

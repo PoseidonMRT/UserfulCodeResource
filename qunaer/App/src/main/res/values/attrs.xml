@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="orientation">
+        <item>65536</item>
+        <item>0</item>
+        <item>1</item>
+    </attr>
+    <attr name="rowCount">
+        <item>4</item>
+    </attr>
+    <attr name="columnCount">
+        <item>4</item>
+    </attr>
+    <attr name="useDefaultMargins">
+        <item>8</item>
+    </attr>
+    <attr name="alignmentMode">
+        <item>65536</item>
+        <item>0</item>
+        <item>1</item>
+    </attr>
+    <attr name="rowOrderPreserved">
+        <item>8</item>
+    </attr>
+    <attr name="columnOrderPreserved">
+        <item>8</item>
+    </attr>
+    <attr name="layout_row">
+        <item>4</item>
+    </attr>
+    <attr name="layout_rowSpan">
+        <item>4</item>
+        <item>1</item>
+    </attr>
+    <attr name="layout_rowWeight">
+        <item>32</item>
+    </attr>
+    <attr name="layout_column">
+        <item>4</item>
+    </attr>
+    <attr name="layout_columnSpan">
+        <item>4</item>
+        <item>1</item>
+    </attr>
+    <attr name="layout_columnWeight">
+        <item>32</item>
+    </attr>
+    <attr name="layout_gravity">
+        <item>131072</item>
+        <item>30</item>
+        <item>50</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>70</item>
+        <item>1</item>
+        <item>7</item>
+        <item>11</item>
+        <item>77</item>
+        <item>80</item>
+        <item>8</item>
+        <item>800003</item>
+        <item>800005</item>
+    </attr>
+</resources>

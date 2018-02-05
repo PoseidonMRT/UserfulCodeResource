@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="154" android:versionName="8.6.9" package="com.Qunar">
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.Manifest.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <permission android:name="com.mqunar.atom.jpush.permission.JPUSH_MESSAGE" android:protectionLevel="signature|signatureOrSystem" />
+    <uses-permission android:name="com.mqunar.atom.jpush.permission.JPUSH_MESSAGE" />
+    <uses-permission-sdk-23 android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="com.huawei.hwid.permission.CONTENT_PROVIDER" />
+    <uses-permission android:name="com.huawei.hwid.permission.ACCESS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="qutui.permission.GPushReceiver.com.Qunar" />
+    <permission android:name="qutui.permission.GPushReceiver.com.Qunar" android:protectionLevel="signature|signatureOrSystem" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application android:theme="@style/spider_Theme_App" android:label="@string/spider_app_name" android:icon="@drawable/spider_ic_launcher" android:name="com.mqunar.spider.QunarApp" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="false">
+        <meta-data android:name="PRELOAD_MODULE" android:value="com.mqunar.atom.ochat,com.mqunar.atom.qupush,com.mqunar.atom.alexhome,com.mqunar.atom.attemper,com.mqunar.atom.im,com.mqunar.atom.browser" />
+        <meta-data android:name="MAIN_SCHEME" android:value="http://alexhome.qunar.com/" />
+        <meta-data android:name="com.mapquest.maps.API_KEY" android:value="Fmjtd%7Cluu82qu22l%2Crs%3Do5-94tsdr" />
+        <meta-data android:name="android.nfc.disable_beam_default" android:value="true" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.dispatcher.DispatcherActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="*.qunar.com" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="*.qunar.com" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="qunaraphone" android:host="*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="qn24bql60fz2ql" android:host="*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="qn4136854c1659" android:host="*" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mqunar.dispatcher.WebActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.dispatcher.DispatcherProxyHomeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter android:label="去哪儿搜索">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.dispatcher.DispatcherProxyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter android:label="去哪儿好友">
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter android:label="去哪儿好友">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/*" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="C35484e7efa08835b60c92705fccfd05" />
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote" />
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false" />
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
+        <meta-data android:name="android.max_aspect" android:value="2.1" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="org.acra.dialog.CrashReportDialog" android:process=":acra" android:finishOnTaskLaunch="true" android:excludeFromRecents="true" android:launchMode="singleInstance" />
+        <service android:name="org.acra.sender.SenderService" android:exported="false" android:process=":acra" />
+        <activity android:name="ctrip.android.oauth.component.CtripWebSdkBrowser" />
+        <activity android:name="com.mqunar.idscan.activity.QrScanPassportActivity" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" />
+        <meta-data android:name="android.3dtouch.launcher_menu" android:resource="@xml/spider_launcher_menu" />
+        <activity android:theme="@style/spider_AppSplash" android:name="com.mqunar.splash.SplashActivity" android:exported="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+                <category android:name="miui.intent.category.SYSAPP_RECOMMEND" />
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.gb.activities.container.FragContainerA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.gb.activities.container.FragContainerB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.gb.activities.SchemeActivity" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyTTSOrderActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyHotelDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyHotelBranchListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyDescInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.gb.activities.GroupbuyListFilterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupBuyOrderRefundRequestActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupBuyOrderRefundResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyKeywordSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyVoucherListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyHotelOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyPassengerListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyEditPassengerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyConsumerCertificateListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyDetailMapActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyOrderActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyDetailRoomActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyListSearchResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyTTSPayResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyTTSBookingResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyPhoneVerifyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyQueryOrderInputActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyImageGalleryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyHotelFacilitiesActivty" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyHotelImageGalleryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.homepage.GroupbuyProductClassifyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.homepage.GroupbuyUserFavoriteProductActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyHotelMoreProductListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyValidOrderCardActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyFastReserveActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyFastReserveResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.HelpInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyCamellsShowActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.GroupbuyCitiesActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityE" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityF" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityG" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityH" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityI" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityJ" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityK" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.gb.activities.backup.ActivityL" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <receiver android:name="com.mqunar.atom.push.MyReceiver" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.push.PushDisguiserActivity" android:exported="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <receiver android:name="com.mqunar.spider.GPushReceiver" android:permission="qutui.permission.GPushReceiver.com.Qunar">
+            <intent-filter>
+                <action android:name="com.mqunar.atom.qutui.ACTION_MESSAGE_RECEIVED" />
+                <category android:name="com.Qunar" />
+                <action android:name="com.mqunar.atom.push.notify" />
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.alipay.sdk.app.H5PayActivity" android:exported="false" android:screenOrientation="behind" android:configChanges="keyboardHidden|navigation|orientation" />
+        <activity android:name="com.alipay.sdk.auth.AuthActivity" android:exported="false" android:screenOrientation="behind" android:configChanges="keyboardHidden|navigation|orientation" />
+        <activity android:name="com.alipay.sdk.app.H5AuthActivity" android:exported="false" android:screenOrientation="behind" android:configChanges="keyboardHidden|navigation|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.collab.ui.activity.SchemeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.collab.voucher.VoucherActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.collab.ui.activity.HotelUserCommentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.collab.ui.activity.CollabImageGalleryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.collab.ui.activity.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.collab.ui.activity.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.collab.ui.activity.backup.ActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.collab.ui.activity.backup.ActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.mc.activity.MainMsgboxActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.mc.activity.ServerMessageListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.mc.activity.MessageCenterTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.mqunar.react.atom.AtomDebugActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.mqunar.react.devsupport.RnDebugActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.mqunar.react.devsupport.DevJsBundleLoadWayActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.mqunar.react.devsupport.log.DevLogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.mqunar.react.base.QRNSchemeController" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity1" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity3" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity4" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity5" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity6" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity7" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity8" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity9" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity10" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity11" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity12" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity13" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity14" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity15" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity16" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity17" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity18" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity19" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.react.base.stack.container.QReactNativeActivity20" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.mqunar.atom.intercar.OuterMediateActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterCarHomeWebActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.CarFaqActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterCarWebActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterCarOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.intercar.OuterCarTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterCarTTSPayResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterTaxiActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.intercar.OuterTransferActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterCarFlightSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterCarFlightSearchListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.InterCarOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.InterCarP2PActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.InterCarOtaListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterCarAddressSuggestActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.OuterCarTerminalListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.backup.ActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.intercar.backup.ActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolHomepageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.carpool.scheme.MotorSchemeControlActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.widget.photos.MultiImageSelectorActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolSearchFlightActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolFlightListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorLocatingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:noHistory="true" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorSelectCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:noHistory="true" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolSelectStationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:noHistory="true" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolSelectAttractionsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:noHistory="true" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorSearchAddressActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:noHistory="true" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorBrowseProfileActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorEditProfileActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorGalleryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="com.mqunar.atom.carpool.control.common.MotorPhotoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorEditorActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorSelectAgeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorSelectDistrictActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.common.MotorSelectorActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolSelectCarModelsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolInitiateActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolJoinActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.debug.DebugConfigurationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolBindCardActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.pay.CarpoolPayManagerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolOrderDetailActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolCancelOrderActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.carpool.control.carpool.CarpoolEvaluateActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.share.MainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="com.mqunar.atom.share.ShareActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.share.weixin.WXEntryActivity" android:exported="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity-alias android:name="com.Qunar.wxapi.WXEntryActivity" android:exported="true" android:targetActivity="com.mqunar.atom.share.weixin.WXEntryActivity" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.share.ScreenShotLayerActivity" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.mqunar.pay.inner.activity.core.SchemeActivity" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.pay.outer.activity.CashierActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+            </intent-filter>
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity android:theme="@*android:style/Theme" android:name="com.mqunar.pay.inner.activity.web.WebPayActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.pay.inner.activity.manager.balance.UCBalanceDispatchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.inner.activity.manager.bank.UCAddBankCardActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.inner.activity.manager.bank.UCBankNoInputActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.inner.activity.manager.withdraw.WithdrawActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.inner.activity.manager.withdraw.QueryUserWithdrawActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.inner.activity.manager.withdraw.AddBankCardActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.inner.activity.manager.account.FindPasswordActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.inner.activity.manager.account.RedPacketListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.pay.inner.activity.manager.account.RedEnvelopeExchangeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.pay.inner.activity.qrcode.QrCodeHelpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.pay.inner.activity.qrcode.OrderValidateActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.pay.inner.activity.qrcode.QrScanActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.pay.inner.activity.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.inner.activity.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.outer.activity.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.pay.outer.activity.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.pay.inner.activity.pay.WXPayEntryActivity" android:exported="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity-alias android:name="com.Qunar.wxapi.WXPayEntryActivity" android:exported="true" android:targetActivity="com.mqunar.pay.inner.activity.pay.WXPayEntryActivity" />
+        <activity android:name="com.mqunar.atom.car.dsell.DsellCarTypeSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.CarCouponAvailableCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.CarScanPayActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.DsellFlightCardsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.SelProvinceActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.SelCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.SelQuActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.backup.ActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.backup.ActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.ChecheRootActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.scheme.SchemeControlActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarFlightListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarMyFlightActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.ChaufOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.ChaufSubmitResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveCommentsListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveStoreEvaluateActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarCouponListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarTerminalListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarPhoneVerificationActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarOrderDistributingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarPhoneOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarEvalActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarSubmitResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.UrbanTrafficActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.car.UTOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.car.UTPhoneOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.car.CarCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.UTCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.TravelHotLineActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarSelectPositionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarSelectCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.TravelHotLineFilterTabActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.TravelSelectTouristActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarVendorListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.car.UrbanTrafficReserveActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.car.CarBookForOtherActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveStoreListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.SelfDriveStoreListFilterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDrivePoiSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDrivePoiDetailListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveCarSelectListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveStoreDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveRentalInstructionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveReturnStoreSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveOrderResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDriveOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.SelfDrivePayResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.CarContactListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.CarAddContactActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.CarModifyContactActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarSearchFragmentTabActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.dsell.DsellOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.dsell.DsellFeedbackActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.dsell.DsellGetInvoiceActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.dsell.DsellRouteRecordActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.dsell.DsellSubmitEvalActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.dsell.DSellModifyPOIActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarUserCenterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarSelectPositionNewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarWebActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarSelectPassengerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.uc.CountryPreNumSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.patch.CarFlightCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.CarCouponShareActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.CarFlightCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.CarFlightOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.CarTrainOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.dsell.DsellAppointmentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.dsell.DsellCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.dsell.DsellFeeDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.InterSelfDriveSelectStoreListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.InterSelfDriveMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.InterSelfDriveStoreListFilterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.InterSelfDriveRentalInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.InterSelfDriveCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.InterSelfDriveSelectCarListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.InterSelfDriveStoreDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.InterSelfDriveOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.InterSelfDriveOrderResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.InterSelfDriveOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.route.CarRouteSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.route.CarRouteSearchResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.route.CarRouteOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.route.CarRouteSubmitResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.car.route.CarRouteCheckTicketActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.route.CarRouteOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.car.route.CarRouteReceiptDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.mqunar.atom.browser.WebSchemeParseActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.browser.QWebBaseActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:name="com.mqunar.hy.fragment.MultiPhotoChooserActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:name="com.mqunar.hy.debug.fragment.DebugActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:name="com.mqunar.hy.debug.fragment.DebugComponetActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:name="com.mqunar.hy.debug.fragment.DebugSchemaActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:name="com.mqunar.hy.debug.fragment.DebugInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Light.NoTitleBar" android:name="com.mqunar.hy.plugin.photo.activity.ImgPreviewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.mqunar.atom.browser.HyMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity01" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity02" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity03" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity04" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity05" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity06" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity07" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity08" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity09" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity10" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity11" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity12" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity13" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity14" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity15" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity16" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity17" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity18" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity19" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyWebActivity20" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.activity.HyAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.mqunar.atom.browser.plugin.mappage.QMapPageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.qutui.KActivity" android:exported="false" android:process=":qutui" android:finishOnTaskLaunch="false" android:excludeFromRecents="true" android:launchMode="singleInstance" />
+        <service android:label="NotificationCenter" android:name="com.mqunar.qutui.NetService" android:exported="true" android:process=":qutui">
+            <intent-filter>
+                <action android:name="com.mqunar.qutui.NetService" />
+            </intent-filter>
+        </service>
+        <receiver android:name="com.mqunar.qutui.QutuiReceiver">
+            <intent-filter>
+                <action android:name="com.mqunar.atom.qutui.ACTION_MESSAGE_TRANSPARENT" />
+                <category android:name="com.Qunar" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.mqunar.qutui.KeepLiveReceiver" android:process=":qutui">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <category android:name="com.Qunar" />
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.flight.activity.internat.FlightOrderShareSingleInterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.CheckInConvenienceActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.FlightPaymentSuccessActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightIntelligenceCallSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.flight.activity.inland.FlightOrderQuestionDialogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.FlightMainActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightPriceTrendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightStatusActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightMixwayListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightRoundwayListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightMultiwayListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FFuzzyListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightAirportListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightStatusListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightStatusDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightStatusSMSAddContactActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightStatusCollectListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightPassengerAddActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightPassengerListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightPhoneOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.atom.flight.activity.inland.FlightOrderDetailReactActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.TrendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.FlightPaymentProcessingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightReserveAddActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightReserveEditActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightReserveListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightReserveDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.NearAirlineActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.RoundCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.internat.FlightDoublePickCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightSubscribeSMSActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.inland.FlightReserveNearAirlineActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.internat.CountryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.internat.FlightInterPassengerAddActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.flight.activity.internat.FlightInterPassengerListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.internat.FlightInterOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.atom.flight.activity.internat.FlightInterOrderConfirmActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.internat.FlightGoAmericaAddressFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.internat.FlightInterSelCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.internat.FlightGoAmericaAddressSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.flight.activity.FlightSchemaObtainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.flight.activity.FlightTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.flight.scheme.SchemeContral" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.CheckInActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.CaptchaActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.JourneyActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.PickerSeatActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.CheckInSuccessActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.CheckInCancelActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.CheckInPassengerListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.SeatCancelActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.checkin.activity.CheckInListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.flight.activity.FlightOtaListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sv.MainActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelRoomsPickActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.atom.hotel.ui.activity.HotelTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.atom.hotel.ui.activity.HotelSchemaObtainAcitivty" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.atom.hotel.ui.activity.SchemeControlActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.TTSVouchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelDetailDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelDetailMapActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelCommentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelEditCommentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelImageDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelRoomImageGalleryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelOrderConfirmActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelOrderSOPResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelPhoneOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelCashbackAccountVerifyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelApplyCashbackActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.LastMinCitysActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.LastMinListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.LastMinWebActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelLocationReportActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelOtherInfoReportActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelCollectionsListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelKeywordsSuggestionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.hotel.ui.activity.LMFilterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.hotel.ui.activity.HotelFilterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelCommentRecommendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelCommentReplyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelChainMembershipCardListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelChainBindCardActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelChainCardIntroduceActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelChainCardRegisterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.ChainHotelOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.ChainHotelSubmitOrderResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelOrderPayInfoConfirmActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelThemeListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelHotBusinessActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelFindActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelThemeCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.MyHotelListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HourRoomOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.hotel.ui.activity.HourRoomFilterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HourRoomCitysActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HourRoomListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelHourRoomOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.hotel.ui.activity.SpringSaleFilterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.SpringSaleCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.SpringSaleListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelUserCommentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelRecommendListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.hotel.ui.activity.HotelRedEnvelopeExchangeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelRedPacketListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelCustomerListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HelpInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.MultiPhotoChooserActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelKeywordsSuggestionNewActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelPhoneRedPacketListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.HotelIntelligenceCallSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.backup.ActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.hotel.ui.activity.backup.ActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.im.activity.QMsgboxTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.im.activity.QImTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.im.activity.QImChooseSessionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.im.activity.QImMainTabActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.imsdk.activity.QImTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.imsdk.activity.QImAtListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.im.activity.QImRequestFriendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateVisible|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.im.activity.QImChatRoomActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.im.activity.QImSessionInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.imsdk.activity.QimFileDownloadActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.im.activity.QImNewFriendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.im.activity.QImRecommendFriendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.im.activity.QImFriendPickActivity" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.im.schema.QchatSchemeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.im.activity.ShipmentActivity" android:launchMode="singleTask" />
+        <activity android:name="com.mqunar.atom.ochat.activity.QMainMsgboxActivity" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.ochat.activity.QMsgboxTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.ochat.activity.QImChooseSessionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.ochat.entry.uc.MessageBoxListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bnb.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.bnb.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.matehome.MateMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.alexhome.ui.activity.MainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.uc.act.LoginByVCodeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.LoginByVCodeVerifyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.EnsurePasswordActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.ModifyPhoneVerifyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.SetPasswordActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCFindPwdEnterVCodeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCLoginByUserNameActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCLoginInputOldPwdActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCModifyPhoneEnterNewPhoneActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCSetSpwdVerifyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.uc.act.TransparentInputPasswordActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCConfirmActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCFindPwdSelectWayActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.AboutUsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.login.UCFastLoginActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.uc.login.UCLoginActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.uc.contral.SchemeContral" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.uc.act.AgreementActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.CollectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.CountryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.CountryPreNumSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.FeedbackActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.HelpInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.QunarIntroductionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.QunarRecommendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.RegisterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.RegisterVerifyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.SelCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.SelProvinceActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.SelQuActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.SettingsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCAddContactActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCAddPassengerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCAddphoneActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCContactListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCFindPwdActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCFindpwdInputverifycode" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCInterLoginActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.ContactSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCModifyContactActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCModifyPassengerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCModifyPhoneActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCModifyPwdActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCPassengerListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCVerifyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UserInfoManagerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.msgcenter.act.MessageBoxTabActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.msgcenter.act.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.uc.msgcenter.act.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.uc.msgcenter.act.backup.ActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.uc.msgcenter.act.backup.ActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.uc.reciept.ReceiptListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.reciept.ReceiptDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.uc.act.UCPwdVerifyModuleActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.mqunar.atom.uc.act.CtripEntryActivity" android:exported="true" android:excludeFromRecents="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity-alias android:name="com.Qunar.ctripapi.CtripEntryActivity" android:exported="true" android:targetActivity="com.mqunar.atom.uc.act.CtripEntryActivity" />
+        <activity android:name="sdk.meizu.auth.ui.AuthActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.huawei.hwid.openapi.auth.dump.OpenDumpActivity" android:exported="false" android:configChanges="orientation|screenSize" />
+        <activity android:name="com.huawei.hwid.openapi.auth.WebAuthorizationActivity" android:exported="false" android:configChanges="orientation|screenSize">
+            <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.qunar.qbug.sdk.ui.activity.QBugActivity" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="com.mqunar.atom.attemper.mupgrade.MUpgradeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="com.mqunar.atom.attemper.pupgrade.PUpgradeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.attemper.utils.ProgressDialogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.attemper.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.attemper.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <receiver android:name="com.mqunar.atom.attemper.pupgrade.NotificationReceiver" android:exported="false" />
+        <provider android:name="android.support.v4.content.FileProvider" android:exported="false" android:authorities="com.Qunar.install.authority" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/spider_filepath" />
+        </provider>
+        <activity android:name="com.mqunar.imsdk.activity.QimPhotoActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.mqunar.imsdk.activity.QimVideoPlayerActivity" />
+        <activity android:name="com.mqunar.imsdk.activity.ShareLocationActivity" />
+        <activity android:name="com.mqunar.imsdk.activity.QimSearchUserActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.mqunar.imsdk.activity.QimChatroomInvitationActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.mqunar.imsdk.activity.QimImageBrowersingActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name="com.mqunar.imsdk.activity.QimMapActivity" android:launchMode="singleTask" />
+        <activity android:name="com.mqunar.imsdk.activity.QimChatActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.imsdk.activity.QimMainActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.mqunar.atom.open.FavoriteManageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.TicketSaleCityListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.map.OpenSideMapActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.mqunar.atom.open.MainActivity" />
+        <activity android:name="com.mqunar.atom.open.FindMainActivity" android:exported="true" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.NearbyMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/spider_Theme_Float" android:name="com.mqunar.atom.open.NearbyListFilterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.NearbyListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.NearbyDealDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.NearbyShopDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.NearbyRankingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.FindOnSaleListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.SubscribeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.OpenCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.NearbySuggestActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.NearbyTopicListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.LocalLifeOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.backup.ActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.open.backup.ActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.train.activity.SchemeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityE" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityF" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityG" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityH" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityI" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityJ" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityK" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityL" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityM" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityN" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityO" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityP" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityQ" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityR" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityS" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityT" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityU" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityV" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityW" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityX" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityY" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.train.activity.TrainActivityZ" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.train.activity.TrainTransparentActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.train.activity.TrainTransparentActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.train.activity.TrainTransparentActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.train.activity.TrainTransparentActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.train.activity.TrainTransparentActivityE" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <service android:name="com.mqunar.atom.train.service.TrainService" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.sight.activity.SightTransparentOrderActionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightContactSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.sight.activity.SightFragmentDisplayActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightOrderRefundActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightProductListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightProductDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightDisplayActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.sight.activity.SightSchemeTransparentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/spider_Theme_Float" android:name="com.mqunar.atom.sight.activity.SightCitiesActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightThemeRecommendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightSuggestionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightOverseaListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightFindInMapActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightDetailMapActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightEditCommentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightPhoneOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightPassengerSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightProductDescriptionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightOnlineComplainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightComplainHistory" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightCommentRecommendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightMoreTicketActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightOrderBookingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightOrderDetailCommentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightImageGalleryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.MultiPhotoChooserActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.sight.activity.SightPayCompletedActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.sight.activity.SightTransparentJumpToCashierActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.sight.activity.SightLinkOrderTransparentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.sight.activity.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.sight.activity.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.mqunar.atom.sight.activity.backup.ActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.sight.activity.backup.ActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity1" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity3" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity4" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity5" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity6" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity7" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity8" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity9" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity10" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity11" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity12" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity13" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity14" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity15" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity16" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity17" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity18" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity19" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity20" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity21" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity22" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity23" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity24" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity25" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity26" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity27" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity28" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity29" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.core.basectx.launcherfragment.LauncherFragmentActivity30" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.core.basectx.launcherfragment.TransparentFragmentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/spider_Theme_App_dialog" android:name="com.mqunar.core.basectx.launcherfragment.DialogFragmentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.order.ui.OrderShareAddActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.order.ui.OrderShareActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.order.ui.OrderShareEventListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.order.ui.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.order.ui.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.order.ui.backup.ActivityC" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.order.ui.backup.ActivityD" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.order.OrderActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.order.SchemeContral" />
+        <activity android:theme="@*android:style/Theme.Translucent" android:name="com.mqunar.atom.meglive.scheme.SchemeActivity" android:exported="true" />
+        <activity android:name="com.mqunar.atom.meglive.activity.LivenessActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationWebActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.vacation.vacation.activity.VacationSchemeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.vacation.visa.activity.VisaSchemeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.vacation.vacation.activity.VacationWeekendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationChannelActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationCitysActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationProductListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationProductDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationOrderListByDateActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationProductSuggestionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationFillOrderActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationAddTravellerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationTravellerListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.vacation.vacation.activity.VacationShowDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationFavoriteManageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationSingleActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationCashierActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationDetailMapActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationChannelAroundActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationRefundMoneyActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationDiscountIndexActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationDiscountCouponListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationDiscountCashListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationContactListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.vacation.vacation.activity.VacationBackup1Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationBackup2Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationBackup3Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationBackup4Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationBackup5Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationPaySuccessActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.vacation.visa.activity.VisaListCategoryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.vacation.vacation.activity.VacationTouchJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.vacation.activity.VacationElectronContractActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaCountryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaTypeListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaProductDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaProductListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaProductListFilterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaDistrictActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaBackup1Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaBackup2Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaBackup3Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaBackup4Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.VisaBackup5Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.visa.activity.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.vacation.localman.activity.LocalmanMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanWebActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanCitySearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanProductListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanCollectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.vacation.localman.activity.LocalmanTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" android:host="ddr.qunar.com" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="qunaraphone" android:host="ddr" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanProductSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.ImageBrowersingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalManOrderActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanOrderSearchResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanOrderRefundActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanSubmitOrderActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.vacation.localman.activity.LocalmanProductDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImMainTabActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImLoadingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.ochatsdk.activity.QImTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImAtListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImRequestFriendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateVisible|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImChatRoomActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImSessionInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.ochatsdk.activity.QImChooseSessionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImFileDownloadActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImNewFriendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImRecommendFriendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.ochatsdk.activity.QImFriendPickActivity" />
+        <activity android:theme="@style/spider_Theme_App_Translucent" android:name="com.mqunar.atom.insur.ui.activity.SchemeControlActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.insur.ui.activity.InsurHomeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.nlp.NLPSearchSuggestActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.nlp.NLPSearchResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.nlp.NLPSightListResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.voice.nlp.NLPSchemeDealerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.nlp.NLPGeneralSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.nlp.NLPFeedbackActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.voice.nlp.NLPFillOrderActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.voice.nlp.NLPHotelOrderInfoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.voice.nlp.NLPHotelImageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:name="com.mqunar.atom.voice.nlp.NLPHotelSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.voice.nlp.NLPModularSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.voice.nlp.NLPHotelRoomImageGalleryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.mqunar.atom.voice.nlp.NLPHotelCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.nlp.backup.ActivityA" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.nlp.backup.ActivityB" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.gonglue.activity.SaDestSearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.gonglue.activity.SaDestCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.gonglue.activity.SaDestCountryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.gonglue.activity.SaBestPathListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.gonglue.activity.SaBestPathDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.gonglue.activity.SaBMapPoiActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.voice.gonglue.activity.BkMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusSearchMainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusCalendarActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusNumberListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusTransitMoreDetailListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusStationListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusTransitDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusTicketPersonEditActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusTicketPersonListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusDetailActivity2" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.bus.activity.BusScheduleActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusOrderFillActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible|adjustResize|adjustNothing" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusOrderRefundActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusPassengerEditActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusPassengerListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusQueryOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusOrderListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusOrderRefundSuccessActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusTextActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.suggestion.BusStationSuggestionActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusTTSPayResultActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.RyRecommendActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.RyRecommendDialogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusTransparentJumpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusSelProvinceActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.cityselect.SelCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.cityselect.SelProvinceActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.cityselect.SelQuActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusSelCityActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusSelQuActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.bus.activity.SchemeActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusFallback1Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusFallback2Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.bus.activity.BusFallback3Activity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.bus.activity.BusTakeChildActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:name="com.mqunar.atom.bus.activity.BusTakeTicketAddressActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateUnchanged|stateHidden|stateAlwaysHidden|stateAlwaysVisible" />
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.mqunar.atom.voip.MainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.mqunar.atom.voip.OncallActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+    </application>
+</manifest>

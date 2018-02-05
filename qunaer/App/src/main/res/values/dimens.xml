@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_gap">16dp</dimen>
+    <dimen name="default_textview_size_14sp">14sp</dimen>
+    <dimen name="ql_button_height">48dp</dimen>
+    <dimen name="ql_button_margin">6dp</dimen>
+    <dimen name="ql_button_max_width">328dp</dimen>
+    <dimen name="ql_button_min_width">184dp</dimen>
+    <dimen name="ql_button_paddingLeft">16dp</dimen>
+    <dimen name="ql_button_paddingRight">16dp</dimen>
+    <dimen name="ql_page_padding_right">16dp</dimen>
+    <dimen name="ql_privacy_policy_buttonfirst_height">50dp</dimen>
+    <dimen name="ql_privacy_policy_buttonfirst_width">0dp</dimen>
+    <dimen name="ql_privacy_policy_linearfirst_padding">10dp</dimen>
+    <dimen name="ql_privacy_policy_linearfive_top">15dp</dimen>
+    <dimen name="ql_privacy_policy_linearfour_padding">16dp</dimen>
+    <dimen name="ql_privacy_policy_linearsed_padding">15dp</dimen>
+    <dimen name="ql_privacy_policy_linearthird_padding">15dp</dimen>
+    <dimen name="ql_privacy_policy_viewfirst_width">0dp</dimen>
+    <dimen name="ql_privacy_policy_viewsed_width">0dp</dimen>
+    <dimen name="title_hight">50dp</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:orientation="horizontal" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="0x1020006" android:layout_width="UNKNOWN_DATA_0x4001" android:layout_height="UNKNOWN_DATA_0x4001" android:src="@drawable/remote_atom_atte_ic_launcher" android:scaleType="center" />
+    <LinearLayout android:orientation="vertical" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent"
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0">
+            <TextView android:textSize="16dp" android:textColor="#ffffff" android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="去哪儿在线升级" />
+            <TextView android:textSize="16dp" android:textColor="#ffffff" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/remote_atom_atte_txtProgress" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_weight="1.0">
+            <ProgressBar android:id="@+id/remote_atom_atte_progressBar" android:layout_width="match_parent" android:layout_height="wrap_content" style="?unknown_attr_ref: 1010078" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

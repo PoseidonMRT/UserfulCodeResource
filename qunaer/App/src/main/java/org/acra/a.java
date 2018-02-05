@@ -1,0 +1,7 @@
+package org.acra;
+
+public final class a {
+    public static final String a = ("-" + ReportField.IS_SILENT);
+    public static final ReportField[] b = new ReportField[]{ReportField.USER_COMMENT, ReportField.ANDROID_VERSION, ReportField.APP_VERSION_NAME, ReportField.BRAND, ReportField.PHONE_MODEL, ReportField.CUSTOM_DATA, ReportField.STACK_TRACE};
+    public static final ReportField[] c = new ReportField[]{ReportField.REPORT_ID, ReportField.APP_VERSION_CODE, ReportField.APP_VERSION_NAME, ReportField.PACKAGE_NAME, ReportField.FILE_PATH, ReportField.PHONE_MODEL, ReportField.BRAND, ReportField.PRODUCT, ReportField.ANDROID_VERSION, ReportField.BUILD, ReportField.TOTAL_MEM_SIZE, ReportField.AVAILABLE_MEM_SIZE, ReportField.CUSTOM_DATA, ReportField.IS_SILENT, ReportField.STACK_TRACE, ReportField.INITIAL_CONFIGURATION, ReportField.CRASH_CONFIGURATION, ReportField.DISPLAY, ReportField.USER_COMMENT, ReportField.USER_APP_START_DATE, ReportField.USER_CRASH_DATE, ReportField.LOGCAT, ReportField.EVENTSLOG, ReportField.INSTALLATION_ID, ReportField.DEVICE_FEATURES, ReportField.ENVIRONMENT, ReportField.SHARED_PREFERENCES, ReportField.ACRA_VERSION, ReportField.VM_VERSION, ReportField.JAVA_STACK_TRACE, ReportField.THREAD_DETAILS, ReportField.PROPERTY, ReportField.SETTINGS_SYSTEM, ReportField.SETTINGS_SECURE, ReportField.SETTINGS_GLOBAL, ReportField.SCREENSHOT, ReportField.ENV, ReportField.NETWORK_STATE, ReportField.PROCESS_NAME, ReportField.PROCESS_ID, ReportField.IS_ROOT};
+}

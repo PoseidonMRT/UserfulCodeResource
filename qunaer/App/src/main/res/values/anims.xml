@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <anim name="spider_slide_in_right">res/anim/spider_slide_in_right.xml</anim>
+    <anim name="spider_slide_out_right">res/anim/spider_slide_out_right.xml</anim>
+    <anim name="spider_fade_stay">res/anim/spider_fade_stay.xml</anim>
+    <anim name="spider_side_in_from_bottom">res/anim/spider_side_in_from_bottom.xml</anim>
+    <anim name="spider_side_in_from_top">res/anim/spider_side_in_from_top.xml</anim>
+    <anim name="spider_side_out_to_bottom">res/anim/spider_side_out_to_bottom.xml</anim>
+    <anim name="spider_side_out_to_top">res/anim/spider_side_out_to_top.xml</anim>
+    <anim name="spider_slide_in_left">res/anim/spider_slide_in_left.xml</anim>
+    <anim name="spider_slide_out_left">res/anim/spider_slide_out_left.xml</anim>
+    <anim name="spider_slide_out_right_medium">res/anim/spider_slide_out_right_medium.xml</anim>
+    <anim name="spider_splash_icon_dismiss_anim">res/anim/spider_splash_icon_dismiss_anim.xml</anim>
+    <anim name="spider_splash_icon_show_anim_end">res/anim/spider_splash_icon_show_anim_end.xml</anim>
+    <anim name="spider_splash_icon_show_anim_start">res/anim/spider_splash_icon_show_anim_start.xml</anim>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/spider_menu_search" android:enabled="true" android:shortcutId="search" android:shortcutShortLabel="@string/spider_3dtouch_search" android:shortcutLongLabel="@string/spider_3dtouch_search">
+        <intent android:action="android.intent.action.VIEW" android:data="qunaraphone://voice/search?from=android_3dtouch" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut android:icon="@drawable/spider_menu_hotel" android:enabled="true" android:shortcutId="hotel" android:shortcutShortLabel="@string/spider_3dtouch_hotel" android:shortcutLongLabel="@string/spider_3dtouch_hotel">
+        <intent android:action="android.intent.action.VIEW" android:data="qunaraphone://hotel/index?from=android_3dtouch" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut android:icon="@drawable/spider_menu_flight" android:enabled="true" android:shortcutId="flight" android:shortcutShortLabel="@string/spider_3dtouch_flight" android:shortcutLongLabel="@string/spider_3dtouch_flight">
+        <intent android:action="android.intent.action.VIEW" android:data="qunaraphone://flight/flighthome?from=android_3dtouch" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut android:icon="@drawable/spider_menu_order" android:enabled="true" android:shortcutId="order" android:shortcutShortLabel="@string/spider_3dtouch_order" android:shortcutLongLabel="@string/spider_3dtouch_order">
+        <intent android:action="android.intent.action.VIEW" android:data="qunaraphone://order/index?from=android_3dtouch" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

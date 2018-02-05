@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launcher_menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <menu android:title="@string/spider_3dtouch_order" data="qunaraphone://order/index?from=meizu_3dtouch" icon="" />
+    <menu android:title="@string/spider_3dtouch_flight" data="qunaraphone://flight/index?from=meizu_3dtouch" icon="" />
+    <menu android:title="@string/spider_3dtouch_hotel" data="qunaraphone://hotel/index?from=meizu_3dtouch" icon="" />
+    <menu android:title="@string/spider_3dtouch_search" data="qunaraphone://voice/search?from=meizu_3dtouch" icon="" />
+</launcher_menu>
